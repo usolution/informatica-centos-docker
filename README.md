@@ -13,6 +13,13 @@ Script to create Docker image with CentOS and Informatica Cloud Secure Agent
   Execute the below command to do a SSH on the docker container
   1. docker ps
   1. docker exec -it [CONTAINER_ID] /bin/bash
+# Step #4
+  Execute the below commands to stop and remove the container
+  1. docker ps --all
+  2. docker container stop [CONTAINER_ID]
+  3. docker container rm [CONTAINER_ID]
   
 # NOTE:
   When you stop/delete the cluster and restart after sometime, the Runtime Secure Agent Group/Runtime Agent/Host name will be changed. In order to resolve it, we have to spcifically mentioned the Hostname when run the docker using -h parameter as mention in Step #2.3
+  
+Docker Commands reference: https://linuxize.com/post/how-to-remove-docker-images-containers-volumes-and-networks/#removing-all-unused-objects
