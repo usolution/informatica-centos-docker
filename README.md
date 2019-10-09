@@ -8,7 +8,7 @@ Script to create Docker image with CentOS and Informatica Cloud Secure Agent
   Checkout all the file from this repository and excute the below docker commands
   1. docker build -t unico/centosinfa .
   2. docker images
-  3. docker run -h [HOST_NAME] unico/centosinfa [INFA USERNAME] [INFA PASSWORD]
+  3. docker run -h [HOST_NAME] unico/centosinfa [INFA USERNAME] [TOKEN]
 # Step #3
   Execute the below command to do a SSH on the docker container
   1. docker ps
