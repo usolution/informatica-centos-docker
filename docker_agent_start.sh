@@ -7,7 +7,7 @@ if [ ! $# -eq 2 ] ; then
 fi
 
 set -e
-echo ${PWD}
+echo password $2
 for entry in "/root/infaagent/apps/agentcore"/*
 do
   echo "$entry"
@@ -17,7 +17,7 @@ cd /root/infaagent/apps/agentcore
 
 sleep 3
 
-/root/infaagent/apps/agentcore/consoleAgentManager.sh configure $1 $2 | grep -q fails && exit 2
+/root/infaagent/apps/agentcore/consoleAgentManager.sh configureToken $1 $2 | grep -q fails && exit 2
 
 
 wait
